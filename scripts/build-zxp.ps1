@@ -10,7 +10,12 @@
 # every timestamp server tried (DigiCert, Sectigo, GlobalSign), so signatures
 # are valid for the certificate's lifetime. Pass -TimestampUrl to try one.
 #
+# Bump ExtensionBundleVersion (and the Extension Version) in the manifest for
+# every release: Adobe's installer (UPIA) reports success but silently keeps
+# the old files when the version number hasn't changed.
+#
 #   $env:RENDERHARE_CERT_PASSWORD = "<password>"; .\scripts\build-zxp.ps1
+#   (without it, the password is read from cert/certificate-password.txt)
 param(
     [string]$ZxpSignCmd = (Join-Path $PSScriptRoot "ZXPSignCmd.exe"),
     [string]$CertPath = (Join-Path $PSScriptRoot "..\cert\renderhare.p12"),
@@ -45,7 +50,8 @@ Get-ChildItem $stage -Recurse -Force -Include ".DS_Store", "Thumbs.db" | Remove-
 # Certificate (self-signed, 10 years) on first run.
 if (-not (Test-Path $CertPath)) {
     New-Item -ItemType Directory -Path (Split-Path $CertPath) -Force | Out-Null
-    & $ZxpSignCmd -selfSignedCert US NY ScriptHare "Render Hare" $CertPassword $CertPath -validityDays 3650
+    # (No -locality: ZXPSignCmd 4.1.103 writes it into the OU field instead.)
+    & $ZxpSignCmd -selfSignedCert US Ohio ScriptHare "Render Hare" $CertPassword $CertPath -validityDays 3650
     if ($LASTEXITCODE -ne 0) { throw "Creating the certificate failed." }
     Write-Host "Created certificate: $CertPath  (back it up, with its password)"
 }

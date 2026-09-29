@@ -1,0 +1,27 @@
+{
+    "_source":  "Adobe Premiere Pro 2026 (26.3): Dictionaries/\u003clocale\u003e/zdictionary_PPRO_\u003clocale\u003e.dat, keys $$$/Premiere/Menu/5500/RenderAndReplace and .../RestoreUnrendered",
+    "renderAndReplace":  {
+                             "de_DE":  "Rendern und ersetzen...",
+                             "en_US":  "Render and Replace...",
+                             "es_ES":  "Procesar y reemplazar...",
+                             "fr_FR":  "Effectuer le rendu et remplacer...",
+                             "it_IT":  "Esegui rendering e sostituisci...",
+                             "ja_JP":  "レンダリングして置き換え...",
+                             "ko_KR":  "렌더링 및 바꾸기...",
+                             "pt_BR":  "Renderizar e substituir...",
+                             "ru_RU":  "Рендеринг и замена...",
+                             "zh_CN":  "渲染和替换..."
+                         },
+    "restoreUnrendered":  {
+                              "de_DE":  "Originalclip wiederherstellen",
+                              "en_US":  "Restore Unrendered",
+                              "es_ES":  "Restaurar sin procesar",
+                              "fr_FR":  "Restaurer les éléments non rendus",
+                              "it_IT":  "Ripristina senza rendering",
+                              "ja_JP":  "レンダリング前に戻す",
+                              "ko_KR":  "렌더링되지 않은 항목 복원",
+                              "pt_BR":  "Restaurar não renderizado",
+                              "ru_RU":  "Восстановить без рендеринга",
+                              "zh_CN":  "恢复未渲染的内容"
+                          }
+}

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Render Hare</title>
+  <style>
+    :root {
+      --bg: #232323; --panel: #2c2c2c; --panel-hi: #333; --line: #3a3a3a;
+      --text: #d6d6d6; --strong: #f2f2f2; --muted: #8c8c8c;
+      --accent: #2680eb; --accent-hi: #3b8ff0; --bad: #e5534b; --good: #3fae5a; --warn: #d9a441;
+    }
+    :root.light {
+      --panel: #e4e4e4; --panel-hi: #d8d8d8; --line: #c8c8c8;
+      --text: #2a2a2a; --strong: #111; --muted: #666;
+    }
+    html, body { margin: 0; height: 100%; }
+    body {
+      font-family: -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 12px;
+      background: var(--bg); color: var(--text);
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    button { font: inherit; color: inherit; cursor: pointer; }
+    [hidden] { display: none !important; }
+    main { flex: 1 1 auto; overflow: auto; padding: 10px 10px 12px; box-sizing: border-box; }
+
+    .head { display: flex; align-items: center; gap: 8px; }
+    .seq { flex: 1 1 auto; min-width: 0; }
+    .seq b { display: block; color: var(--strong); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .muted { color: var(--muted); font-size: 11px; }
+
+    .btn { background: var(--accent); border: 0; border-radius: 4px; color: #fff; padding: 5px 10px; white-space: nowrap; }
+    .btn:hover { background: var(--accent-hi); }
+    .btn:disabled { background: var(--panel-hi); color: var(--muted); cursor: default; }
+    .btn.ghost { background: none; border: 1px solid var(--line); color: var(--text); }
+    .btn.ghost:hover { border-color: var(--muted); }
+    .btn.small { padding: 3px 8px; font-size: 11px; }
+    .btn.wide { width: 100%; padding: 7px 10px; margin: 8px 0 4px; }
+
+    .summary {
+      margin: 10px 0 2px; padding: 8px 10px; border-radius: 4px; background: var(--panel);
+      border-left: 3px solid var(--line); line-height: 1.4;
+    }
+    .summary.bad { border-left-color: var(--bad); }
+    .summary.good { border-left-color: var(--good); }
+    .summary strong { color: var(--strong); }
+    .opt { display: flex; align-items: center; gap: 6px; margin: 8px 0 0; color: var(--muted); cursor: pointer; }
+    .opt input { margin: 0; }
+
+    .section { margin-top: 12px; }
+    .section-head {
+      display: flex; align-items: center; gap: 6px; margin-bottom: 4px;
+      text-transform: uppercase; letter-spacing: .04em; font-size: 10px; color: var(--muted);
+    }
+    .grp { border-radius: 4px; background: var(--panel); margin-bottom: 4px; }
+    .grp-row { display: flex; align-items: center; gap: 6px; padding: 6px 8px 6px 4px; }
+    .toggle { background: none; border: 0; color: var(--muted); width: 18px; padding: 0; font-size: 10px; }
+    .grp-main { flex: 1 1 auto; min-width: 0; cursor: pointer; }
+    .grp-title { color: var(--strong); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .grp-sub { color: var(--muted); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .clips { padding: 0 8px 6px 28px; }
+    .clip {
+      display: flex; gap: 8px; padding: 3px 6px; border-radius: 3px; cursor: pointer;
+      font-family: Consolas, Menlo, monospace; font-size: 11px; color: var(--text);
+    }
+    .clip:hover { background: var(--panel-hi); color: var(--strong); }
+    .clip .trk { width: 30px; color: var(--muted); }
+    .clip .off { color: var(--warn); }
+    .status { margin-top: 10px; color: var(--muted); min-height: 16px; line-height: 1.4; }
+    .status.err { color: var(--bad); }
+    .empty { color: var(--muted); padding: 6px 2px; }
+
+    footer {
+      flex: 0 0 auto; display: flex; justify-content: space-between; gap: 8px;
+      padding: 5px 10px; border-top: 1px solid var(--line); font-size: 10px; color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--accent-hi); text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="head">
+      <div class="seq"><b id="seqname">—</b><span id="age" class="muted"></span></div>
+      <button id="rescan" class="btn ghost small" title="Scan the active sequence again">Rescan</button>
+    </div>
+    <div id="summary" class="summary">Loading…</div>
+    <label class="opt"><input type="checkbox" id="outside" /> Include clips outside In/Out</label>
+    <div id="list"></div>
+    <div id="status" class="status"></div>
+  </main>
+  <footer>
+    <span id="version">Render Hare</span>
+    <a href="#" id="brand" title="scripthare.com">by ScriptHare</a>
+  </footer>
+  <script src="./js/menu.js"></script>
+  <script src="./js/panel.js"></script>
+</body>
+</html>

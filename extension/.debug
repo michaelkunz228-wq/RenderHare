@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Development only (left out of the .zxp by scripts/build-zxp.ps1): enables
+  Chrome DevTools for the panel at http://localhost:8092 while it's open.
+-->
+<ExtensionList>
+  <Extension Id="com.scripthare.renderhare.panel">
+    <HostList>
+      <Host Name="PPRO" Port="8092" />
+    </HostList>
+  </Extension>
+</ExtensionList>

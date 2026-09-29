@@ -1,0 +1,16 @@
+# build output
+dist/
+
+# signing material — never commit
+*.p12
+*.pfx
+cert/
+.cert-password
+
+# tools downloaded for packaging
+scripts/ZXPSignCmd*
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/

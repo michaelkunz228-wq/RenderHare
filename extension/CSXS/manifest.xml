@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Render Hare — CEP extension manifest.
+  Premiere Pro 2026 (26.0) and newer; CEP 12 runtime.
+  Node.js is enabled only to run the menu helper in tools/ (Windows PowerShell /
+  macOS osascript); the panel opens no network ports.
+-->
+<ExtensionManifest Version="12.0"
+    ExtensionBundleId="com.scripthare.renderhare"
+    ExtensionBundleVersion="1.0.0"
+    ExtensionBundleName="Render Hare"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <ExtensionList>
+    <Extension Id="com.scripthare.renderhare.panel" Version="1.0.0" />
+  </ExtensionList>
+
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="PPRO" Version="[26.0,99.9]" />
+    </HostList>
+    <LocaleList>
+      <Locale Code="All" />
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="12.0" />
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+
+  <DispatchInfoList>
+    <Extension Id="com.scripthare.renderhare.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./index.html</MainPath>
+          <ScriptPath>./jsx/renderhare.jsx</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--enable-nodejs</Parameter>
+            <Parameter>--mixed-context</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>Render Hare</Menu>
+          <Geometry>
+            <Size>
+              <Height>520</Height>
+              <Width>320</Width>
+            </Size>
+            <MinSize>
+              <Height>240</Height>
+              <Width>240</Width>
+            </MinSize>
+          </Geometry>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>

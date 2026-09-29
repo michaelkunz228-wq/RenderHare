@@ -52,12 +52,12 @@ Older Premiere versions aren't supported. If you need one, open an issue.
    [Releases](../../releases) page.
 2. Install it with **one** of:
    - the installer script from the same release, placed next to the `.zxp`:
-     **`Install Render Hare.bat`** (Windows) or **`Install Render Hare.command`**
+     **`Install-RenderHare.bat`** (Windows) or **`Install-RenderHare.command`**
      (macOS). These run Adobe's own installer, which comes with Creative Cloud;
    - or any ZXP installer app, e.g. [ZXP Installer by aescripts](https://aescripts.com/learn/zxp-installer/).
 
    On a Mac, if double-clicking the `.command` file is refused, open Terminal
-   in that folder and run `sh "Install Render Hare.command"`.
+   in that folder and run `sh Install-RenderHare.command`.
 3. Restart Premiere Pro, then open **Window → Extensions → Render Hare**.
 
 ## Using it

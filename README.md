@@ -2,6 +2,8 @@
 
 **One-click Render and Replace for After Effects Dynamic Link clips in Premiere Pro.**
 
+![Render Hare finds the live After Effects comps in a sequence, then renders and replaces them in one click](docs/render-hare.png)
+
 If you're like me and keep running into After Effects Dynamic Link comps that
 never got rendered and replaced, crashing your projects or leaving an export
 stuck at 37% for hours, this is for you.

@@ -6,13 +6,13 @@
   macOS osascript); the panel opens no network ports.
 -->
 <ExtensionManifest Version="12.0"
-    ExtensionBundleId="com.scripthare.renderhare"
+    ExtensionBundleId="com.codehare.renderhare"
     ExtensionBundleVersion="1.0.0"
     ExtensionBundleName="Render Hare"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <ExtensionList>
-    <Extension Id="com.scripthare.renderhare.panel" Version="1.0.0" />
+    <Extension Id="com.codehare.renderhare.panel" Version="1.0.0" />
   </ExtensionList>
 
   <ExecutionEnvironment>
@@ -28,7 +28,7 @@
   </ExecutionEnvironment>
 
   <DispatchInfoList>
-    <Extension Id="com.scripthare.renderhare.panel">
+    <Extension Id="com.codehare.renderhare.panel">
       <DispatchInfo>
         <Resources>
           <MainPath>./index.html</MainPath>

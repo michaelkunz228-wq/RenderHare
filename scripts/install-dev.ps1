@@ -5,7 +5,7 @@
 param([switch]$Remove)
 $ErrorActionPreference = "Stop"
 
-$id   = "com.scripthare.renderhare"
+$id   = "com.codehare.renderhare"
 $src  = (Resolve-Path (Join-Path $PSScriptRoot "..\extension")).Path
 $dir  = Join-Path $env:APPDATA "Adobe\CEP\extensions"
 $dest = Join-Path $dir $id

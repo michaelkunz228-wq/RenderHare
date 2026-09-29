@@ -4,7 +4,7 @@
   Chrome DevTools for the panel at http://localhost:8092 while it's open.
 -->
 <ExtensionList>
-  <Extension Id="com.scripthare.renderhare.panel">
+  <Extension Id="com.codehare.renderhare.panel">
     <HostList>
       <Host Name="PPRO" Port="8092" />
     </HostList>

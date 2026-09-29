@@ -13,8 +13,8 @@ comp in your sequence and runs Premiere's own **Render and Replace** on them
 in one click, so your export reads finished video files instead of asking
 After Effects to render every frame live.
 
-*Made by [ScriptHare](https://scripthare.com). If you like it, please check
-out my other work at [scripthare.com](https://scripthare.com).*
+*Made by **Code Hare**. If you like it, please check out my other projects,
+like [ScriptHare](https://scripthare.com).*
 
 ---
 
@@ -113,7 +113,7 @@ these items), so Render Hare:
 3. watches for Premiere's dialogs to close, then rescans.
 
 Nothing leaves your machine: the panel opens no network connections and
-sends no analytics. The only link is the "by ScriptHare" link at the bottom.
+sends no analytics. The only link is the scripthare.com link at the bottom.
 
 ## Troubleshooting
 
@@ -159,10 +159,9 @@ install/              end-user installer scripts (wrap Adobe's UPIA)
 
 ## License
 
-[MIT](LICENSE) © 2026 ScriptHare
+[MIT](LICENSE) © 2026 Code Hare
 
 ---
 
-*Render Hare is an independent project by [ScriptHare](https://scripthare.com),
-not affiliated with or endorsed by Adobe. Adobe, Premiere Pro and After
+*Render Hare is an independent project by Code Hare, not affiliated with or endorsed by Adobe. Adobe, Premiere Pro and After
 Effects are trademarks of Adobe Inc.*

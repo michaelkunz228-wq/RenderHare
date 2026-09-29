@@ -4,7 +4,7 @@
 # (scripts/enable-debug-mode.sh). Restart Premiere once afterwards.
 # Run with --remove to unlink.
 set -e
-ID="com.scripthare.renderhare"
+ID="com.codehare.renderhare"
 SRC="$(cd "$(dirname "$0")/../extension" && pwd)"
 DIR="$HOME/Library/Application Support/Adobe/CEP/extensions"
 DEST="$DIR/$ID"

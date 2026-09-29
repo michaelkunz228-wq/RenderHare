@@ -1,6 +1,6 @@
 /*
  * Render Hare — panel.  v1.0.0
- * by ScriptHare · https://scripthare.com · MIT licence
+ * by Code Hare · MIT licence
  *
  * Lists the After Effects Dynamic Link clips in the active sequence (including
  * inside nested sequences) and hands them to Premiere's own
@@ -75,7 +75,7 @@
   // ---- state + helpers -------------------------------------------------------------
   var state = { data: null, scannedAt: 0, busy: false, working: false, expanded: {}, actions: [], includeOutside: readPref() };
   els.outside.checked = state.includeOutside;
-  els.version.textContent = "Render Hare " + VERSION;
+  els.version.textContent = "Render Hare " + VERSION + " · by Code Hare";
 
   function readPref() {
     try { return window.localStorage.getItem(PREF_OUTSIDE) === "1"; } catch (e) { return false; }

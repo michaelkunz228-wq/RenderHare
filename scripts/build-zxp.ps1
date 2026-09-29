@@ -51,7 +51,7 @@ Get-ChildItem $stage -Recurse -Force -Include ".DS_Store", "Thumbs.db" | Remove-
 if (-not (Test-Path $CertPath)) {
     New-Item -ItemType Directory -Path (Split-Path $CertPath) -Force | Out-Null
     # (No -locality: ZXPSignCmd 4.1.103 writes it into the OU field instead.)
-    & $ZxpSignCmd -selfSignedCert US Ohio ScriptHare "Render Hare" $CertPassword $CertPath -validityDays 3650
+    & $ZxpSignCmd -selfSignedCert US Ohio "Code Hare" "Render Hare" $CertPassword $CertPath -validityDays 3650
     if ($LASTEXITCODE -ne 0) { throw "Creating the certificate failed." }
     Write-Host "Created certificate: $CertPath  (back it up, with its password)"
 }

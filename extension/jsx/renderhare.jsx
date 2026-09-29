@@ -1,6 +1,6 @@
 /*
  * Render Hare — ExtendScript side.  v1.0.0
- * by ScriptHare · https://scripthare.com · MIT licence
+ * by Code Hare · MIT licence
  *
  * Finds After Effects Dynamic Link clips in a Premiere sequence (including
  * inside nested sequences) and selects them, so the panel can run Premiere's
